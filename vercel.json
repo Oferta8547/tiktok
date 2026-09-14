@@ -1,0 +1,84 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "functions": {
+    "api/*.js": {
+      "memory": 512,
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/checkout-create-pix.php",
+      "destination": "/api/checkout-create-pix"
+    },
+    {
+      "source": "/orders_status.php",
+      "destination": "/api/orders_status"
+    },
+    {
+      "source": "/teste-pix.php",
+      "destination": "/api/health"
+    },
+    {
+      "source": "/carrinho",
+      "destination": "/carrinho.html"
+    },
+    {
+      "source": "/carrinho/",
+      "destination": "/carrinho.html"
+    },
+    {
+      "source": "/((?!api/)(?!.*\\.[a-zA-Z0-9]{2,5}$).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(assets|__l5e)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/carrinho.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/avatars/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/reviews/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    }
+  ]
+}
