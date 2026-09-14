@@ -1,0 +1,12 @@
+{
+  "name": "reformamax-escadas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ReformaMax - site estatico + checkout PIX serverless (IronPay + UTMify)",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "jsdom": "^30.0.1"
+  }
+}

